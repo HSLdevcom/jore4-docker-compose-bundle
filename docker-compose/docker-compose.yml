@@ -1,0 +1,250 @@
+# This is a generated file, all modifications will be overwritten!
+
+
+---
+version: "3.8"
+services:
+  jore4-auth:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-auth-base
+    ports:
+      - "127.0.0.1:3200:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-cypress:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-cypress-base
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-hastus:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-hastus-base
+    ports:
+      - "127.0.0.1:3008:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-hasura:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-hasura-base
+    ports:
+      - "127.0.0.1:3201:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-jore3importer:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-jore3importer-base
+    ports:
+      - "127.0.0.1:3004:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-mapmatching:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-mapmatching-base
+    ports:
+      - "127.0.0.1:3005:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-mapmatchingdb:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-mapmatchingdb-base
+    ports:
+      - "127.0.0.1:6433:5432"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-mbtiles:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-mbtiles-base
+    ports:
+      - "127.0.0.1:3203:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-mssqltestdb:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-mssqltestdb-base
+    ports:
+      - "127.0.0.1:1433:1433"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-testdb:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-testdb-base
+    ports:
+      - "127.0.0.1:6432:5432"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-tiamat:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-tiamat-base
+    ports:
+      - "127.0.0.1:3010:1888"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-timetablesapi:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-timetablesapi-base
+    ports:
+      - "127.0.0.1:3009:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-ui:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-ui-base
+    ports:
+      - "127.0.0.1:3302:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  jore4-proxy:
+    container_name: proxy
+    image: nginx:alpine
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    ports:
+      - "127.0.0.1:3300:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+networks:
+  jore4:
+
+secrets:
+  auth-db-hostname:
+    file: ./secret-auth-db-hostname
+  auth-db-name:
+    file: ./secret-auth-db-name
+  auth-db-password:
+    file: ./secret-auth-db-password
+  auth-db-session-schema:
+    file: ./secret-auth-db-session-schema
+  auth-db-username:
+    file: ./secret-auth-db-username
+  auth-oidc-client-id:
+    file: ./secret-auth-oidc-client-id
+  auth-oidc-client-secret:
+    file: ./secret-auth-oidc-client-secret
+  hasura-db-auth-username:
+    file: ./secret-hasura-db-auth-username
+  hasura-db-hostname:
+    file: ./secret-hasura-db-hostname
+  hasura-db-jore3importer-username:
+    file: ./secret-hasura-db-jore3importer-username
+  hasura-db-name:
+    file: ./secret-hasura-db-name
+  hasura-db-password:
+    file: ./secret-hasura-db-password
+  hasura-db-tiamat-name:
+    file: ./secret-hasura-db-tiamat-name
+  hasura-db-timetables-api-username:
+    file: ./secret-hasura-db-timetables-api-username
+  hasura-db-timetables-name:
+    file: ./secret-hasura-db-timetables-name
+  hasura-db-username:
+    file: ./secret-hasura-db-username
+  hasura-hasura-admin-secret:
+    file: ./secret-hasura-hasura-admin-secret
+  jore3importer-importer-db-database:
+    file: ./secret-jore3importer-importer-db-database
+  jore3importer-importer-db-hostname:
+    file: ./secret-jore3importer-importer-db-hostname
+  jore3importer-importer-db-password:
+    file: ./secret-jore3importer-importer-db-password
+  jore3importer-importer-db-username:
+    file: ./secret-jore3importer-importer-db-username
+  jore3importer-jore4-db-database:
+    file: ./secret-jore3importer-jore4-db-database
+  jore3importer-jore4-db-hostname:
+    file: ./secret-jore3importer-jore4-db-hostname
+  jore3importer-jore4-db-password:
+    file: ./secret-jore3importer-jore4-db-password
+  jore3importer-jore4-db-username:
+    file: ./secret-jore3importer-jore4-db-username
+  jore3importer-source-db-database:
+    file: ./secret-jore3importer-source-db-database
+  jore3importer-source-db-hostname:
+    file: ./secret-jore3importer-source-db-hostname
+  jore3importer-source-db-password:
+    file: ./secret-jore3importer-source-db-password
+  jore3importer-source-db-port:
+    file: ./secret-jore3importer-source-db-port
+  jore3importer-source-db-username:
+    file: ./secret-jore3importer-source-db-username
+  mapmatching-db-password:
+    file: ./secret-mapmatching-db-password
+  mapmatching-db-username:
+    file: ./secret-mapmatching-db-username
+  mapmatchingdb-postgres-password:
+    file: ./secret-mapmatchingdb-postgres-password
+  mapmatchingdb-postgres-user:
+    file: ./secret-mapmatchingdb-postgres-user
+  testdb-db-auth-name:
+    file: ./secret-testdb-db-auth-name
+  testdb-db-auth-password:
+    file: ./secret-testdb-db-auth-password
+  testdb-db-auth-username:
+    file: ./secret-testdb-db-auth-username
+  testdb-db-hasura-name:
+    file: ./secret-testdb-db-hasura-name
+  testdb-db-hasura-password:
+    file: ./secret-testdb-db-hasura-password
+  testdb-db-hasura-username:
+    file: ./secret-testdb-db-hasura-username
+  testdb-db-jore3importer-name:
+    file: ./secret-testdb-db-jore3importer-name
+  testdb-db-jore3importer-password:
+    file: ./secret-testdb-db-jore3importer-password
+  testdb-db-jore3importer-username:
+    file: ./secret-testdb-db-jore3importer-username
+  testdb-db-tiamat-name:
+    file: ./secret-testdb-db-tiamat-name
+  testdb-db-tiamat-password:
+    file: ./secret-testdb-db-tiamat-password
+  testdb-db-tiamat-username:
+    file: ./secret-testdb-db-tiamat-username
+  testdb-db-timetables-api-password:
+    file: ./secret-testdb-db-timetables-api-password
+  testdb-db-timetables-api-username:
+    file: ./secret-testdb-db-timetables-api-username
+  testdb-db-timetables-name:
+    file: ./secret-testdb-db-timetables-name
+  tiamat-tiamat-db-database:
+    file: ./secret-tiamat-tiamat-db-database
+  tiamat-tiamat-db-hostname:
+    file: ./secret-tiamat-tiamat-db-hostname
+  tiamat-tiamat-db-password:
+    file: ./secret-tiamat-tiamat-db-password
+  tiamat-tiamat-db-username:
+    file: ./secret-tiamat-tiamat-db-username
+  timetablesapi-jore4-db-database:
+    file: ./secret-timetablesapi-jore4-db-database
+  timetablesapi-jore4-db-hostname:
+    file: ./secret-timetablesapi-jore4-db-hostname
+  timetablesapi-jore4-db-password:
+    file: ./secret-timetablesapi-jore4-db-password
+  timetablesapi-jore4-db-username:
+    file: ./secret-timetablesapi-jore4-db-username

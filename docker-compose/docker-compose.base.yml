@@ -1,0 +1,297 @@
+# This is a generated file, all modifications will be overwritten!
+
+
+---
+version: "3.8"
+services:
+  jore4-auth-base:
+    container_name: "auth"
+    # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
+    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20240920-4e2a9325417eaf43818c7e260513be926d394647}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      API_PATH_PREFIX: ""
+      API_PATH_PREFIX_PUBLIC: "/api/auth"
+      DB_SESSION_SCHEMA: "public"
+      LOGINPAGE_URL: "http://localhost:3300"
+      LOGOUTPAGE_URL: "http://localhost:3300"
+      OIDC_PROVIDER_BASE_URL: "https://hslid-dev.t5.fi"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+      SELF_PUBLIC_BASE_URL: "http://localhost:3300"
+    secrets:
+      - source: auth-db-hostname
+        target: /mnt/secrets-store/db-hostname
+      - source: auth-db-name
+        target: /mnt/secrets-store/db-name
+      - source: auth-db-password
+        target: /mnt/secrets-store/db-password
+      - source: auth-db-session-schema
+        target: /mnt/secrets-store/db-session-schema
+      - source: auth-db-username
+        target: /mnt/secrets-store/db-username
+      - source: auth-oidc-client-id
+        target: /mnt/secrets-store/oidc-client-id
+      - source: auth-oidc-client-secret
+        target: /mnt/secrets-store/oidc-client-secret
+
+  jore4-cypress-base:
+    container_name: "cypress"
+    # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
+    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20241210-94befa9a0d11126e29b25d6dd9b48409df38649a}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      CYPRESS_BASE_URL: "http://jore4-proxy:80"
+      CYPRESS_DISABLE_MAP_TILES: "true"
+      HASURA_API_URL: "http://jore4-hasura:8080/v1/graphql"
+      POSTGRES_DB: "jore4e2e"
+      POSTGRES_HOST: "jore4-testdb"
+      POSTGRES_PASSWORD: "adminpassword"
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: "dbadmin"
+    entrypoint: bash -c "yarn cypress open"
+
+
+  jore4-hastus-base:
+    container_name: "hastus"
+    # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
+    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20240920-8d2de0a3b1257ce00a1b65e25d5a7d4f0561206f}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      HASURA_URL: "http://jore4-proxy:80/api/graphql/v1/graphql"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+
+  jore4-hasura-base:
+    container_name: "hasura"
+    # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
+    image: "${HASURA_DOCKER_IMAGE:-hsldevcom/jore4-hasura:hsl-main--20241205-bd645544977038b7df3df090c2ef181cafa20b65}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      HASURA_GRAPHQL_AUTH_HOOK: "http://jore4-auth:8080/public/v1/hasura/webhook"
+      HASURA_GRAPHQL_AUTH_HOOK_MODE: "GET"
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
+      HASURA_GRAPHQL_METADATA_DIR: "/hasura-metadata"
+      HASURA_GRAPHQL_MIGRATIONS_DIR: "/hasura-migrations"
+      HASURA_GRAPHQL_MIGRATIONS_SERVER_TIMEOUT: "60"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: hasura-db-auth-username
+        target: /mnt/secrets-store/db-auth-username
+      - source: hasura-db-hostname
+        target: /mnt/secrets-store/db-hostname
+      - source: hasura-db-jore3importer-username
+        target: /mnt/secrets-store/db-jore3importer-username
+      - source: hasura-db-name
+        target: /mnt/secrets-store/db-name
+      - source: hasura-db-password
+        target: /mnt/secrets-store/db-password
+      - source: hasura-db-tiamat-name
+        target: /mnt/secrets-store/db-tiamat-name
+      - source: hasura-db-timetables-api-username
+        target: /mnt/secrets-store/db-timetables-api-username
+      - source: hasura-db-timetables-name
+        target: /mnt/secrets-store/db-timetables-name
+      - source: hasura-db-username
+        target: /mnt/secrets-store/db-username
+      - source: hasura-hasura-admin-secret
+        target: /mnt/secrets-store/hasura-admin-secret
+
+  jore4-jore3importer-base:
+    container_name: "jore3importer"
+    # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20240920-d35986ceccb6c886ac8c9c723b350ac69e8245a6}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      DIGIROAD_STOP_CSV_FILE_URL: "https://jore4storage.blob.core.windows.net/jore4-digiroad/digiroad_stops_2022_06_08.csv"
+      MAP_MATCHING_API_BASEURL: "http://localhost:3005/api/mapmatching"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: jore3importer-importer-db-database
+        target: /mnt/secrets-store/importer-db-database
+      - source: jore3importer-importer-db-hostname
+        target: /mnt/secrets-store/importer-db-hostname
+      - source: jore3importer-importer-db-password
+        target: /mnt/secrets-store/importer-db-password
+      - source: jore3importer-importer-db-username
+        target: /mnt/secrets-store/importer-db-username
+      - source: jore3importer-jore4-db-database
+        target: /mnt/secrets-store/jore4-db-database
+      - source: jore3importer-jore4-db-hostname
+        target: /mnt/secrets-store/jore4-db-hostname
+      - source: jore3importer-jore4-db-password
+        target: /mnt/secrets-store/jore4-db-password
+      - source: jore3importer-jore4-db-username
+        target: /mnt/secrets-store/jore4-db-username
+      - source: jore3importer-source-db-database
+        target: /mnt/secrets-store/source-db-database
+      - source: jore3importer-source-db-hostname
+        target: /mnt/secrets-store/source-db-hostname
+      - source: jore3importer-source-db-password
+        target: /mnt/secrets-store/source-db-password
+      - source: jore3importer-source-db-port
+        target: /mnt/secrets-store/source-db-port
+      - source: jore3importer-source-db-username
+        target: /mnt/secrets-store/source-db-username
+    profiles:
+      - importer
+
+
+  jore4-mapmatching-base:
+    container_name: "mapmatching"
+    # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
+    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20240905-b35697db3217e9d33792c1518d0741c9a2babcd7}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      DB_DATABASE: "jore4mapmatching"
+      DB_HOSTNAME: "jore4-mapmatchingdb"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: mapmatching-db-password
+        target: /mnt/secrets-store/db-password
+      - source: mapmatching-db-username
+        target: /mnt/secrets-store/db-username
+
+  jore4-mapmatchingdb-base:
+    container_name: "mapmatchingdb"
+    # you may replace the bundled docker image by setting $MAPMATCHINGDB_DOCKER_IMAGE
+    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-hsldevcom/jore4-postgres:mapmatching-main--20240905-5127bc444d3b324a8bb76f6fe3705166e9cf10ac}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      DIGIROAD_ROUTING_DUMP_VERSION: "2022-10-06"
+      POSTGRES_DB: "jore4mapmatching"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: mapmatchingdb-postgres-password
+        target: /mnt/secrets-store/postgres-password
+      - source: mapmatchingdb-postgres-user
+        target: /mnt/secrets-store/postgres-user
+
+  jore4-mbtiles-base:
+    container_name: "mbtiles"
+    # you may replace the bundled docker image by setting $MBTILES_DOCKER_IMAGE
+    image: "${MBTILES_DOCKER_IMAGE:-hsldevcom/jore4-mbtiles-server:main--20230314-c3fafdbddfb21533cb4035f4807a568de987d643}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      DR_LINKKI_TILES_URL: "https://jore4storage.blob.core.windows.net/jore4-ui/dr_linkki_2023-04-18.mbtiles"
+
+  jore4-mssqltestdb-base:
+    container_name: "mssqltestdb"
+    # you may replace the bundled docker image by setting $MSSQLTESTDB_DOCKER_IMAGE
+    image: "${MSSQLTESTDB_DOCKER_IMAGE:-hsldevcom/jore4-mssql-testdb:schema-only-main--21ef30b56e38b0cfa118ccf610ba0fa7e9e00ef7}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      SA_PASSWORD: "P@ssw0rd"
+    profiles:
+      - importer
+
+
+  jore4-testdb-base:
+    container_name: "testdb"
+    # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
+    image: "${TESTDB_DOCKER_IMAGE:-hsldevcom/jore4-postgres:azuredbmock-main--20240905-5127bc444d3b324a8bb76f6fe3705166e9cf10ac}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      POSTGRES_DB: "jore4e2e"
+      POSTGRES_PASSWORD: "adminpassword"
+      POSTGRES_USER: "dbadmin"
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: testdb-db-auth-name
+        target: /mnt/secrets-store/db-auth-name
+      - source: testdb-db-auth-password
+        target: /mnt/secrets-store/db-auth-password
+      - source: testdb-db-auth-username
+        target: /mnt/secrets-store/db-auth-username
+      - source: testdb-db-hasura-name
+        target: /mnt/secrets-store/db-hasura-name
+      - source: testdb-db-hasura-password
+        target: /mnt/secrets-store/db-hasura-password
+      - source: testdb-db-hasura-username
+        target: /mnt/secrets-store/db-hasura-username
+      - source: testdb-db-jore3importer-name
+        target: /mnt/secrets-store/db-jore3importer-name
+      - source: testdb-db-jore3importer-password
+        target: /mnt/secrets-store/db-jore3importer-password
+      - source: testdb-db-jore3importer-username
+        target: /mnt/secrets-store/db-jore3importer-username
+      - source: testdb-db-tiamat-name
+        target: /mnt/secrets-store/db-tiamat-name
+      - source: testdb-db-tiamat-password
+        target: /mnt/secrets-store/db-tiamat-password
+      - source: testdb-db-tiamat-username
+        target: /mnt/secrets-store/db-tiamat-username
+      - source: testdb-db-timetables-api-password
+        target: /mnt/secrets-store/db-timetables-api-password
+      - source: testdb-db-timetables-api-username
+        target: /mnt/secrets-store/db-timetables-api-username
+      - source: testdb-db-timetables-name
+        target: /mnt/secrets-store/db-timetables-name
+
+  jore4-tiamat-base:
+    container_name: "tiamat"
+    # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
+    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20241211-74da77de6ad488c67e3c95769845cf7b89c3f20c}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: tiamat-tiamat-db-database
+        target: /mnt/secrets-store/tiamat-db-database
+      - source: tiamat-tiamat-db-hostname
+        target: /mnt/secrets-store/tiamat-db-hostname
+      - source: tiamat-tiamat-db-password
+        target: /mnt/secrets-store/tiamat-db-password
+      - source: tiamat-tiamat-db-username
+        target: /mnt/secrets-store/tiamat-db-username
+
+  jore4-timetablesapi-base:
+    container_name: "timetablesapi"
+    # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20240920-e5673200fc5fb3c6ab5e4223b00bdeb1ded33384}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+    secrets:
+      - source: timetablesapi-jore4-db-database
+        target: /mnt/secrets-store/jore4-db-database
+      - source: timetablesapi-jore4-db-hostname
+        target: /mnt/secrets-store/jore4-db-hostname
+      - source: timetablesapi-jore4-db-password
+        target: /mnt/secrets-store/jore4-db-password
+      - source: timetablesapi-jore4-db-username
+        target: /mnt/secrets-store/jore4-db-username
+
+  jore4-ui-base:
+    container_name: "ui"
+    # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
+    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20241210-94befa9a0d11126e29b25d6dd9b48409df38649a}"
+    restart: "unless-stopped"
+    networks:
+      - jore4
+    environment:
+      SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
+
