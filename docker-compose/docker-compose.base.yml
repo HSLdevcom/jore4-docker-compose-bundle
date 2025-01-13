@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20240920-4e2a9325417eaf43818c7e260513be926d394647}"
+    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250113-a3e2b8aa6020868cf1904f03bb1926943baa1e4c}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -107,7 +107,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20240920-d35986ceccb6c886ac8c9c723b350ac69e8245a6}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20250113-6e4c9bd777ab82cbfeafca406ac126b25acd0347}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20241218-873aa1205123f73e331c068384eab5fdba0cf8b0}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250113-97b96b0adfa84fff0cd7197517e3da38130ec61c}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -269,7 +269,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20240920-e5673200fc5fb3c6ab5e4223b00bdeb1ded33384}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20250113-0d037d3d4d50604d7f38f29a6c5e5f6669d4ce93}"
     restart: "unless-stopped"
     networks:
       - jore4
