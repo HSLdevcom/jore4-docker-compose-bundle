@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20241216-a6133e897fab2c5c3a7a49db3645a95d5ba0dc7b}"
+    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20241219-b105b155b4aa1f286d9c14ab344376722a76e2d8}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20240905-b35697db3217e9d33792c1518d0741c9a2babcd7}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20241218-873aa1205123f73e331c068384eab5fdba0cf8b0}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20241216-a6133e897fab2c5c3a7a49db3645a95d5ba0dc7b}"
+    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20241219-b105b155b4aa1f286d9c14ab344376722a76e2d8}"
     restart: "unless-stopped"
     networks:
       - jore4
