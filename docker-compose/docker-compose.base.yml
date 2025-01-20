@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250113-a3e2b8aa6020868cf1904f03bb1926943baa1e4c}"
+    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250120-13ff48cdf0b448436b59d0333295c3b8c5ca0eaf}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -107,7 +107,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20250114-d4cf7be00a244efeb03ed1ae150f0f6a97401d42}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20250120-b3a629254afd360983ef35ed2741b403bb80f314}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -250,7 +250,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20250114-c71458d9cb95cdec308f544b3dbab5609cbb5cf7}"
+    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20250120-8672012db48dd1dbf347e2a89ecb5981e6d8eab4}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -269,7 +269,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20250113-0d037d3d4d50604d7f38f29a6c5e5f6669d4ce93}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20250120-02f4b715d1c75810afd176c02f0cd461f868aa2b}"
     restart: "unless-stopped"
     networks:
       - jore4
