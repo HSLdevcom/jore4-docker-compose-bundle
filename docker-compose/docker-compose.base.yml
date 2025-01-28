@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250124-2e52ac3b3493bcbc8af2366a816081e3c527c14b}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250128-510b0b977f6e45de4ee27927a987d25cd0527984}"
     restart: "unless-stopped"
     networks:
       - jore4
