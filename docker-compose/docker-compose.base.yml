@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250130-da95c30aa8edbf640ad4b5aa6e96b6bb952db83f}"
+    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250131-ef124cc1973fa2370e0b9513348635f0a5e32521}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -69,7 +69,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-hsldevcom/jore4-hasura:hsl-main--20250121-f026353f2acca43ee35fbd590bb9e75aa94a2319}"
+    image: "${HASURA_DOCKER_IMAGE:-hsldevcom/jore4-hasura:hsl-main--20250203-c94b6d1df3e9e4d5e4746f2d4ad604892a32994f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -250,7 +250,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20250122-68f57855e23f63178eb2103dd0f2f325670011e0}"
+    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20250201-1bd585d4cb8a424bc1b3fa9223d646bc3b7f56f3}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250130-da95c30aa8edbf640ad4b5aa6e96b6bb952db83f}"
+    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250131-ef124cc1973fa2370e0b9513348635f0a5e32521}"
     restart: "unless-stopped"
     networks:
       - jore4
