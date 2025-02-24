@@ -58,7 +58,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250129-ac09d2b0b2831c2cc15f4b89cc67d732e0ebbacc}"
+    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250224-302486f5bc87751e221f4a72adbbc26b30cbbc21}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -107,7 +107,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20250120-b3a629254afd360983ef35ed2741b403bb80f314}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-hsldevcom/jore4-jore3-importer:main--20250224-a4fa05728e7f2685be80c7c07cc6583eef229b94}"
     restart: "unless-stopped"
     networks:
       - jore4
