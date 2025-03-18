@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250318-b66cde2b0d87cfbbd7893c451b984f25646090f4}"
+    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250318-1ca46a942682230c7273092af5467a4dcd75a281}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250318-b66cde2b0d87cfbbd7893c451b984f25646090f4}"
+    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250318-1ca46a942682230c7273092af5467a4dcd75a281}"
     restart: "unless-stopped"
     networks:
       - jore4
