@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250224-abb3ea4a622c3fa195e4e0f994bf0e1f2e806f77}"
+    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250417-1c945a91b60dfcf494f8b6e8859083f328be8532}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250416-3bb8eecbff29a9aa2486bab5f0d76734481d2949}"
+    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250417-3fdeda38c1e2bfb1b6a6dd4e8d27ebd4630c5490}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -58,7 +58,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250404-874f0410f765c791e025ae73c995e9eb9f697b6a}"
+    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250417-40f9df5e1ad089449978a5309e87ae04c68103c7}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -69,7 +69,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-hsldevcom/jore4-hasura:hsl-main--20250416-0a606c8087fe0fe155730c7568da54805003d65f}"
+    image: "${HASURA_DOCKER_IMAGE:-hsldevcom/jore4-hasura:hsl-main--20250417-795c7e6d1b84995eb310f112fcf623203be792f9}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250404-e64e75edc2b6a52689d426db778769d8fc5cad1b}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250417-cdfc1ebfe717f90bd2683f1a8d269c7868287ef7}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -166,7 +166,7 @@ services:
   jore4-mapmatchingdb-base:
     container_name: "mapmatchingdb"
     # you may replace the bundled docker image by setting $MAPMATCHINGDB_DOCKER_IMAGE
-    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-hsldevcom/jore4-postgres:mapmatching-main--20250221-2dd52b60d585bffe906679fe5c4cb82cbaefcd96}"
+    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-hsldevcom/jore4-postgres:mapmatching-main--20250417-f4475a4acb0579e5231901183aa2220d821707ab}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -206,7 +206,7 @@ services:
   jore4-testdb-base:
     container_name: "testdb"
     # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
-    image: "${TESTDB_DOCKER_IMAGE:-hsldevcom/jore4-postgres:azuredbmock-main--20250221-2dd52b60d585bffe906679fe5c4cb82cbaefcd96}"
+    image: "${TESTDB_DOCKER_IMAGE:-hsldevcom/jore4-postgres:azuredbmock-main--20250417-f4475a4acb0579e5231901183aa2220d821707ab}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -250,7 +250,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20250416-5d9a8047cf98dfc71046f5ff8ab5619b4e13c23e}"
+    image: "${TIAMAT_DOCKER_IMAGE:-hsldevcom/jore4-tiamat:main--20250417-0fd6ba922f0c2bd00c61d17539f1339918433dd2}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -269,7 +269,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20250120-02f4b715d1c75810afd176c02f0cd461f868aa2b}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-hsldevcom/jore4-timetables-api:main--20250417-8480feb15258a6608698c85daac370a2c5230b71}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250416-3bb8eecbff29a9aa2486bab5f0d76734481d2949}"
+    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250417-3fdeda38c1e2bfb1b6a6dd4e8d27ebd4630c5490}"
     restart: "unless-stopped"
     networks:
       - jore4
