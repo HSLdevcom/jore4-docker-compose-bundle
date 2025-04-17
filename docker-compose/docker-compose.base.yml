@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250417-1c945a91b60dfcf494f8b6e8859083f328be8532}"
+    image: "${AUTH_DOCKER_IMAGE:-hsldevcom/jore4-auth:main--20250417-480bad3ae39281114b9e61a0ca3ed8959bc5ab22}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -58,7 +58,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250417-40f9df5e1ad089449978a5309e87ae04c68103c7}"
+    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250417-4c481fbd03dbc6cae437a6716ce72c9b0dbdcada}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250417-27a23a84e23ecd88032db657495325564483e941}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-hsldevcom/jore4-map-matching:main--20250417-3d00728da2b8543adbfa4d3b1a77c2c3f7f550fb}"
     restart: "unless-stopped"
     networks:
       - jore4
