@@ -58,7 +58,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250417-4c481fbd03dbc6cae437a6716ce72c9b0dbdcada}"
+    image: "${HASTUS_DOCKER_IMAGE:-hsldevcom/jore4-hastus:main--20250505-ee96e3c676d62756bae6641953d2bdc140cccee7}"
     restart: "unless-stopped"
     networks:
       - jore4
