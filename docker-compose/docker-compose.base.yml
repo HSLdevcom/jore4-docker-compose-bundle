@@ -193,7 +193,7 @@ services:
   jore4-mssqltestdb-base:
     container_name: "mssqltestdb"
     # you may replace the bundled docker image by setting $MSSQLTESTDB_DOCKER_IMAGE
-    image: "${MSSQLTESTDB_DOCKER_IMAGE:-hsldevcom/jore4-mssql-testdb:schema-only-main--20250508-348cac964ff6a08b3776f003ddd036e4505cda18}"
+    image: "${MSSQLTESTDB_DOCKER_IMAGE:-hsldevcom/jore4-mssql-testdb:schema-only-main--20250522-b6faa7f241aff901bca85b7322ab2ed23a50f350}"
     restart: "unless-stopped"
     networks:
       - jore4
