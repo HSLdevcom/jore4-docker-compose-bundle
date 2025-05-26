@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250522-bd796b6941eb73226cfcb6548e3fc0e5c74b01e1}"
+    image: "${CYPRESS_DOCKER_IMAGE:-hsldevcom/jore4-cypress:main--20250526-fe043e9acab47e6370c5359b021c0ebd8618799f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -193,7 +193,7 @@ services:
   jore4-mssqltestdb-base:
     container_name: "mssqltestdb"
     # you may replace the bundled docker image by setting $MSSQLTESTDB_DOCKER_IMAGE
-    image: "${MSSQLTESTDB_DOCKER_IMAGE:-hsldevcom/jore4-mssql-testdb:schema-only-main--20250522-b6faa7f241aff901bca85b7322ab2ed23a50f350}"
+    image: "${MSSQLTESTDB_DOCKER_IMAGE:-hsldevcom/jore4-mssql-testdb:schema-only-main--20250526-c30d91361576c50767eb355abd3727a1d64c8290}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250521-968333260cc5ed8743897ce8a8ad395b752694a5}"
+    image: "${UI_DOCKER_IMAGE:-hsldevcom/jore4-ui:main--20250526-fe043e9acab47e6370c5359b021c0ebd8618799f}"
     restart: "unless-stopped"
     networks:
       - jore4
