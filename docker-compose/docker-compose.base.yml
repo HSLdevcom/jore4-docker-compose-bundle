@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-05-28-c8bb084e0310a35a22d84f73429a9da048cfee57@sha256:48715e02bc8539fe0beb976d99293f14a11f5615e6157773bc20d7b42dcadadb}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-05-28-b2789817e2590e8d2342b12f8115e6113d8dd976@sha256:08fe9978fae4d49fd730b61a035ca866d9f4aea1c38990ffd6afa7a2704c8ddd}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -250,7 +250,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-05-21-8d816ac173ce1093afda61723ce7ae9e6ac95a0b@sha256:d410c3982f67f626c8c673d683017337b1851479eeaa411d6a3fc63f4f8238f6}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-05-28-e974529f10ba7db332805a328e219f12eff2f626@sha256:c5d19b67894d4d0ed418376c280ddcac22d6af3914c8385aa96b49e793bab217}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-05-28-c8bb084e0310a35a22d84f73429a9da048cfee57@sha256:51461742da62d940eb3b1d9de29e127b26ee7efd9dfa3d85e55b2efbd5b83a4c}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-05-28-b2789817e2590e8d2342b12f8115e6113d8dd976@sha256:2befd26e6dbc487e196f84aa45c7180282554e20f9644521a705959084ea11c7}"
     restart: "unless-stopped"
     networks:
       - jore4
