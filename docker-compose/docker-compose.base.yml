@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-05-28-713ac992c0bfd01e38e46699021090ae9b8d5d43@sha256:25998e8225525ba6505e8a97f593077ed3e9faa09b3a1683f81b6f3c421cf0d2}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-05-28-18adc68f9bdcf514f6a45bb953d2cc54c55cb78d@sha256:b78cc7badcc553d5f65e7c031b19a54ef21f76b8638c834c16ec7ed11fe2930f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -58,7 +58,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2025-05-21-1d5417101af47313d378fc90159d4a4365e1cb44@sha256:1955d1512080b7b2d52d5a06de7f9c33f7eda04cd39ab20b4df79b4f6957ffdc}"
+    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2025-05-28-9f0dda882544fb5f6da6956e629185f11efd6219@sha256:330c663743a876938b717805b62425ada31b4f8c41393b687ab22cd48c1d81ec}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-05-21-9bdea11973b99b5fb1c796d2071bb4e7aab31876@sha256:d6b4febd5cb3c993cf09e88595550636727f5b6c571faf878cfc403cc5110cda}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-05-28-3e60179717063d0aa7a37412b2dffe3dcb5edfac@sha256:6df1bbdab524843eef560a2b84b05fa85ef4a0755a72e98988cc037c17b5c492}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-05-28-713ac992c0bfd01e38e46699021090ae9b8d5d43@sha256:fba21f8789b0ac79c97646427935de5ed569c2dedb48584e98e7418b3762573a}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-05-28-18adc68f9bdcf514f6a45bb953d2cc54c55cb78d@sha256:2c5fe2c974233e08c314c7e87614897fc4e93eb033d1c17744b2ebb6c4151374}"
     restart: "unless-stopped"
     networks:
       - jore4
