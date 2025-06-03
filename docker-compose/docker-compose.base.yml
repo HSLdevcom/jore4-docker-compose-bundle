@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-06-03-e17fd6da0948fd1c57501a4a9d458bcd3076e88b@sha256:a0190081d049e297441ef4db1f1e867c7262a08675fbc3ee6f09acbaf22dd8b2}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-06-03-7eb0153fc58943c121d80c3da3f1e77f7c66d46a@sha256:db004e8da5fc81c6f4e2b2a79df9c32cb0832f70e60c7fcc74d846ecaa7789ac}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -69,7 +69,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-05-21-835f31ab194053fd66e45ad15ab396c0860607aa@sha256:16722f0150cffec7ecd3e15f7c204631f493bb0e31514d4ae8d4e9f1ea57e47c}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-06-03-50bee88b6687dd7b69123ef42f4e9c84b466d72f@sha256:d0b0216e541e6368c5943ca0dcbe2e771d7fadc79367bbcbbe41e3a58e9840e8}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -250,7 +250,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-05-28-e974529f10ba7db332805a328e219f12eff2f626@sha256:c5d19b67894d4d0ed418376c280ddcac22d6af3914c8385aa96b49e793bab217}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-06-03-2034d125c5265ff23968c7ff927f9e029240c051@sha256:c20149745c0a103781d348474203707aa2e4cb80bcf55d2708ad51eab91b0fe6}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-06-03-e17fd6da0948fd1c57501a4a9d458bcd3076e88b@sha256:458d35d7056d34ba31c0090b5627ab7560397d14880a7f9b1f3a639a26c30aae}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-06-03-7eb0153fc58943c121d80c3da3f1e77f7c66d46a@sha256:bd0f842e051e9fd780f03e2c47d427b2d7368021de1e90cf1952eca0cc42c790}"
     restart: "unless-stopped"
     networks:
       - jore4
