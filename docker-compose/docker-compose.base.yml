@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2025-05-28-a48e8a9c07c5c875bf4d6dfb919878b0f2b3ac78@sha256:036ef0c3bc6cbb41c1e480da7ac73e78709b69baf5244a97cc84ed5d256e5f13}"
+    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2025-05-28-a48e8a9c07c5c875bf4d6dfb919878b0f2b3ac78}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-06-05-9f17ce0adcef1fb3b368ca7fda636342fe8686c4@sha256:be0d87c51afa0bfee668ec6e0098c557dc9a89acaeba509b1921a691bbd15188}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-06-05-9f17ce0adcef1fb3b368ca7fda636342fe8686c4}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -58,7 +58,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2025-05-28-9f0dda882544fb5f6da6956e629185f11efd6219@sha256:330c663743a876938b717805b62425ada31b4f8c41393b687ab22cd48c1d81ec}"
+    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2025-05-28-9f0dda882544fb5f6da6956e629185f11efd6219}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -69,7 +69,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-06-03-50bee88b6687dd7b69123ef42f4e9c84b466d72f@sha256:d0b0216e541e6368c5943ca0dcbe2e771d7fadc79367bbcbbe41e3a58e9840e8}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-06-03-50bee88b6687dd7b69123ef42f4e9c84b466d72f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -107,7 +107,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2025-06-05-a7d3aace505a9b5462f7df4ead221534de4ce86e@sha256:f4b50b0ac81c9acec84a95b372470aaf3d35c5c9de58fe46e4ea73a4fd7f51fe}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2025-06-05-a7d3aace505a9b5462f7df4ead221534de4ce86e}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-05-28-3e60179717063d0aa7a37412b2dffe3dcb5edfac@sha256:6df1bbdab524843eef560a2b84b05fa85ef4a0755a72e98988cc037c17b5c492}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-05-28-3e60179717063d0aa7a37412b2dffe3dcb5edfac}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -166,7 +166,7 @@ services:
   jore4-mapmatchingdb-base:
     container_name: "mapmatchingdb"
     # you may replace the bundled docker image by setting $MAPMATCHINGDB_DOCKER_IMAGE
-    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2025-06-05-4bae24ab7b882d54f7f4dfe1d61f655d58f156e8@sha256:4e71449c93a438ff6d38031b75fe87f7c5b5bdcab2915f3ec4e4e216fdcf45ba}"
+    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2025-06-05-4bae24ab7b882d54f7f4dfe1d61f655d58f156e8}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -183,7 +183,7 @@ services:
   jore4-mbtiles-base:
     container_name: "mbtiles"
     # you may replace the bundled docker image by setting $MBTILES_DOCKER_IMAGE
-    image: "${MBTILES_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mbtiles-server:main-2025-05-28-74216a5407fe420e64663ad0371ece45a3ba3bbe@sha256:c937218315c35adecb9a50a449c8107c54d1c941601a68a40645ebbda914793e}"
+    image: "${MBTILES_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mbtiles-server:main-2025-05-28-74216a5407fe420e64663ad0371ece45a3ba3bbe}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -193,7 +193,7 @@ services:
   jore4-mssqltestdb-base:
     container_name: "mssqltestdb"
     # you may replace the bundled docker image by setting $MSSQLTESTDB_DOCKER_IMAGE
-    image: "${MSSQLTESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mssql-testdb:main-2025-05-28-72e971859f304b8a1523c7643d97e341983b5c53@sha256:44a31ef3dfd0906bdaaf034a0b56c0aa7eeb5104e690f818de6c80cf236a271d}"
+    image: "${MSSQLTESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mssql-testdb:main-2025-05-28-72e971859f304b8a1523c7643d97e341983b5c53}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -206,7 +206,7 @@ services:
   jore4-testdb-base:
     container_name: "testdb"
     # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
-    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2025-06-05-4bae24ab7b882d54f7f4dfe1d61f655d58f156e8@sha256:782741c145f8ed6bb27fd7569f34729bd3863676186d618fb3e0ea3511494ac3}"
+    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2025-06-05-4bae24ab7b882d54f7f4dfe1d61f655d58f156e8}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -250,7 +250,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-06-03-2034d125c5265ff23968c7ff927f9e029240c051@sha256:c20149745c0a103781d348474203707aa2e4cb80bcf55d2708ad51eab91b0fe6}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-06-03-2034d125c5265ff23968c7ff927f9e029240c051}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -269,7 +269,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2025-05-21-d8bac213314bfa1faeff15ddb6c3cfa43bd93ba8@sha256:404872ddac605932382a69e7e15e51107c5dc0199b018ee23363067146fc27ff}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2025-05-21-d8bac213314bfa1faeff15ddb6c3cfa43bd93ba8}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -288,7 +288,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-06-05-9f17ce0adcef1fb3b368ca7fda636342fe8686c4@sha256:48647f0c704f5331d4b18d53f8b99d27de81687d7dbae5784b031d59620b0b80}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-06-05-9f17ce0adcef1fb3b368ca7fda636342fe8686c4}"
     restart: "unless-stopped"
     networks:
       - jore4
