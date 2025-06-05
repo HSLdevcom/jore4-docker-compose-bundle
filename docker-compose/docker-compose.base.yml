@@ -166,7 +166,7 @@ services:
   jore4-mapmatchingdb-base:
     container_name: "mapmatchingdb"
     # you may replace the bundled docker image by setting $MAPMATCHINGDB_DOCKER_IMAGE
-    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2025-05-28-8b96b63f63e83192fbfd47145b6e58ed61faf704@sha256:ba951b5514870922ce15f31de010985da96d48a8759025f01b12ed1292e4fb48}"
+    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2025-06-05-4bae24ab7b882d54f7f4dfe1d61f655d58f156e8@sha256:4e71449c93a438ff6d38031b75fe87f7c5b5bdcab2915f3ec4e4e216fdcf45ba}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -206,7 +206,7 @@ services:
   jore4-testdb-base:
     container_name: "testdb"
     # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
-    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2025-05-28-8b96b63f63e83192fbfd47145b6e58ed61faf704@sha256:399ca9e3f5195449b062f65abbdfd0a3a67a407f4a3db1c1b7594e5783152053}"
+    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2025-06-05-4bae24ab7b882d54f7f4dfe1d61f655d58f156e8@sha256:782741c145f8ed6bb27fd7569f34729bd3863676186d618fb3e0ea3511494ac3}"
     restart: "unless-stopped"
     networks:
       - jore4
