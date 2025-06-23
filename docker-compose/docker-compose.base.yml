@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-06-19-56ac2557457b9ffd8cb1cfe7fc0cf8551bc2c07f}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-06-23-e664832b8315809a28e71b20383508beb20abe26}"
     restart: "unless-stopped"
     networks:
       - jore4
