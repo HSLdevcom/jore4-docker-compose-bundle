@@ -234,6 +234,8 @@ services:
         target: /mnt/secrets-store/db-jore3importer-password
       - source: testdb-db-jore3importer-username
         target: /mnt/secrets-store/db-jore3importer-username
+      - source: testdb-db-jore4-main-name
+        target: /mnt/secrets-store/db-jore4-main-name
       - source: testdb-db-tiamat-name
         target: /mnt/secrets-store/db-tiamat-name
       - source: testdb-db-tiamat-password

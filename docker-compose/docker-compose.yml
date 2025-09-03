@@ -219,6 +219,8 @@ secrets:
     file: ./secret-testdb-db-jore3importer-password
   testdb-db-jore3importer-username:
     file: ./secret-testdb-db-jore3importer-username
+  testdb-db-jore4-main-name:
+    file: ./secret-testdb-db-jore4-main-name
   testdb-db-tiamat-name:
     file: ./secret-testdb-db-tiamat-name
   testdb-db-tiamat-password:
