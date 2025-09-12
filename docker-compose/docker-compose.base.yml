@@ -69,7 +69,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-08-28-b8d8513f87799dc9ec40b6d24728f28de8b476fd}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-09-12-6cd07069f0663df62c61c5ba85f0f35087823e4b}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -252,7 +252,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-09-03-be4df784c2657a56bf36b6c31556dd684bfd6314}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2025-09-12-9491852583fd9f065289031672561595d7bb86b2}"
     restart: "unless-stopped"
     networks:
       - jore4
