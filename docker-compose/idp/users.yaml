@@ -1,0 +1,12 @@
+- sub: john.doe
+  idClaims:
+    email: john.doe@example.com
+    name: John Doe
+    given_name: John
+    family_name: Doe
+- sub: jane.doe
+  idClaims:
+    email: jane.doe@example.com
+    name: Jane Doe
+    given_name: Jane
+    family_name: Doe

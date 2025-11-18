@@ -17,7 +17,7 @@ services:
       DB_SESSION_SCHEMA: "public"
       LOGINPAGE_URL: "http://localhost:3300"
       LOGOUTPAGE_URL: "http://localhost:3300"
-      OIDC_PROVIDER_BASE_URL: "https://hslid-dev.t5.fi"
+      OIDC_PROVIDER_BASE_URL: "http://idp.local.jore.hsldev.com:9400/"
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
       SELF_PUBLIC_BASE_URL: "http://localhost:3300"
     secrets:
@@ -189,6 +189,21 @@ services:
       - jore4
     environment:
       DR_LINKKI_TILES_URL: "https://jore4storage.blob.core.windows.net/jore4-ui/dr_linkki_2023-04-18.mbtiles"
+
+  jore4-idp-base:
+    container_name: "idp"
+    # you may replace the bundled docker image by setting $IDP_DOCKER_IMAGE
+    image: "${IDP_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mock-oidc-provider:main-2025-11-18-b0bf8753a95c8d61ddecc2a906d7a8cd20c9444c}"
+    restart: "unless-stopped"
+    networks:
+      jore4:
+          aliases:
+            - idp.local.jore.hsldev.com
+    command: src/server.js --users /mnt/users.yaml
+    environment:
+      PORT: "9400"
+    volumes:
+      - ./idp/users.yaml:/mnt/users.yaml
 
   jore4-mssqltestdb-base:
     container_name: "mssqltestdb"

@@ -73,6 +73,15 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
+  jore4-idp:
+    extends:
+      file: docker-compose.base.yml
+      service: jore4-idp-base
+    ports:
+      - "127.0.0.1:9400:9400"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
   jore4-mssqltestdb:
     extends:
       file: docker-compose.base.yml
