@@ -39,7 +39,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-11-14-eb39010d0ee82001ee9bdd485b1e8462b4a864fe}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2025-11-18-682cfc481540cdc18ee52423b67260f8068ba64b}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-11-12-a29abfec5154506ef5ffc14838e3a3d7bab9c465}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-11-18-abc2a9cb65c9720a898951a0295d528b08277512}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -305,7 +305,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-11-14-eb39010d0ee82001ee9bdd485b1e8462b4a864fe}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-11-18-682cfc481540cdc18ee52423b67260f8068ba64b}"
     restart: "unless-stopped"
     networks:
       - jore4
