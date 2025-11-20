@@ -149,7 +149,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-11-18-abc2a9cb65c9720a898951a0295d528b08277512}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2025-11-20-6e45252ffc025d7b3463c1988498bbbbbceced04}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -305,7 +305,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-11-19-1e901a3c2def4cb124f574385c001de69103420e}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2025-11-20-705ddf6073fe2e0a4b18aa0ca562e715c8335cfb}"
     restart: "unless-stopped"
     networks:
       - jore4
