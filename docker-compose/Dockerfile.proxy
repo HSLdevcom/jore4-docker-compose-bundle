@@ -1,0 +1,7 @@
+FROM nginx:alpine
+
+# Get certs from blob storage and extract them inside nginx certs folder
+RUN mkdir -p /etc/nginx/certs
+RUN curl -L -o /tmp/local-jore-hsldev-com.tar https://stjore4letsencryptdev001.blob.core.windows.net/jore4-local-https-certificates/main/local-jore-hsldev-com.tar
+RUN tar -xv -C /etc/nginx/certs -f /tmp/local-jore-hsldev-com.tar local.jore.hsldev.com/privkey.pem local.jore.hsldev.com/fullchain.pem
+

@@ -15,11 +15,11 @@ services:
       API_PATH_PREFIX: ""
       API_PATH_PREFIX_PUBLIC: "/api/auth"
       DB_SESSION_SCHEMA: "public"
-      LOGINPAGE_URL: "http://localhost:3300"
-      LOGOUTPAGE_URL: "http://localhost:3300"
+      LOGINPAGE_URL: "https://e2e.local.jore.hsldev.com:443"
+      LOGOUTPAGE_URL: "https://e2e.local.jore.hsldev.com:443"
       OIDC_PROVIDER_BASE_URL: "http://idp.local.jore.hsldev.com:9400/"
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
-      SELF_PUBLIC_BASE_URL: "http://localhost:3300"
+      SELF_PUBLIC_BASE_URL: "https://e2e.local.jore.hsldev.com:443"
     secrets:
       - source: auth-db-hostname
         target: /mnt/secrets-store/db-hostname
@@ -44,7 +44,7 @@ services:
     networks:
       - jore4
     environment:
-      CYPRESS_BASE_URL: "http://jore4-proxy:80"
+      CYPRESS_BASE_URL: "https://e2e.local.jore.hsldev.com:443"
       CYPRESS_DISABLE_MAP_TILES: "true"
       HASURA_API_URL: "http://jore4-hasura:8080/v1/graphql"
       POSTGRES_DB: "jore4e2e"
@@ -63,7 +63,7 @@ services:
     networks:
       - jore4
     environment:
-      HASURA_URL: "http://jore4-proxy:80/api/graphql/v1/graphql"
+      HASURA_URL: "http://jore4-hasura:8080/v1/graphql"
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
 
   jore4-hasura-base:
