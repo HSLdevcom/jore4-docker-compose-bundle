@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2025-11-24-2a286fd14084abcda0db2aa7df7414e0455bb4c0}"
+    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2025-12-05-b76b47f9c1baf8def395981bb4455c271cb12229}"
     restart: "unless-stopped"
     networks:
       - jore4
