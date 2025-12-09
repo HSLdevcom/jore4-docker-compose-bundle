@@ -188,7 +188,7 @@ services:
     networks:
       - jore4
     environment:
-      DR_LINKKI_TILES_URL: "https://stjore4dev001.blob.core.windows.net/jore4-ui/dr_linkki_2025-11-25.mbtiles"
+      DR_LINKKI_TILES_URL: "https://stjore4dev001.blob.core.windows.net/jore4-ui/dr_linkki_2025-12-09_zoom-18.mbtiles"
 
   jore4-idp-base:
     container_name: "idp"
