@@ -69,7 +69,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-12-10-0e763b04c76c512796cea577ee023a23d5dcc56f}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2025-12-10-1e434d2ecc18f424b9b787d28089361382b37ce6}"
     restart: "unless-stopped"
     networks:
       - jore4
