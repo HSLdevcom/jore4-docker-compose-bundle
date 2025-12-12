@@ -146,6 +146,8 @@ networks:
   jore4:
 
 secrets:
+  auth-db-hasura-username:
+    file: ./secret-auth-db-hasura-username
   auth-db-hostname:
     file: ./secret-auth-db-hostname
   auth-db-name:
@@ -160,6 +162,8 @@ secrets:
     file: ./secret-auth-oidc-client-id
   auth-oidc-client-secret:
     file: ./secret-auth-oidc-client-secret
+  hasura-db-auth-name:
+    file: ./secret-hasura-db-auth-name
   hasura-db-auth-username:
     file: ./secret-hasura-db-auth-username
   hasura-db-hostname:

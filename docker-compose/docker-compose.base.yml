@@ -21,6 +21,8 @@ services:
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
       SELF_PUBLIC_BASE_URL: "https://e2e.local.jore.hsldev.com:443"
     secrets:
+      - source: auth-db-hasura-username
+        target: /mnt/secrets-store/db-hasura-username
       - source: auth-db-hostname
         target: /mnt/secrets-store/db-hostname
       - source: auth-db-name
@@ -83,6 +85,8 @@ services:
       HASURA_GRAPHQL_MIGRATIONS_SERVER_TIMEOUT: "60"
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
     secrets:
+      - source: hasura-db-auth-name
+        target: /mnt/secrets-store/db-auth-name
       - source: hasura-db-auth-username
         target: /mnt/secrets-store/db-auth-username
       - source: hasura-db-hostname
