@@ -197,7 +197,7 @@ services:
   jore4-idp-base:
     container_name: "idp"
     # you may replace the bundled docker image by setting $IDP_DOCKER_IMAGE
-    image: "${IDP_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mock-oidc-provider:main-2025-11-18-b0bf8753a95c8d61ddecc2a906d7a8cd20c9444c}"
+    image: "${IDP_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mock-oidc-provider:main-2025-12-12-d8ab96caad1a78b3f5ebd51bca98a28dd72c0ba5}"
     restart: "unless-stopped"
     networks:
       jore4:
