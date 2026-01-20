@@ -271,7 +271,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2026-01-19-4f4a43f7ee5f07efa494d138ecebb684fa4942f5}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2026-01-20-220326ceca04117b63ea55112c3a707a9730eef3}"
     restart: "unless-stopped"
     networks:
       - jore4
