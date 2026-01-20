@@ -123,7 +123,7 @@ services:
       file: docker-compose.base.yml
       service: jore4-ui-base
     ports:
-      - "127.0.0.1:3302:80"
+      - "127.0.0.1:3302:8080"
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
