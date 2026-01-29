@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2026-01-19-5ce9ff3525e2a076e591f84d087663d0a7a9a91a}"
+    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2026-01-29-df5f46d0db8f934ce6ce695e09973477c9496ac5}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -60,7 +60,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-01-19-b548076d2dffef74ed2eb7335e4738cb89e32026}"
+    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-01-29-1b2c15e67c328fe9e4e3a9c71a85e5b73181215c}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -111,7 +111,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2026-01-27-726b5002164dc4884b26ae011379f63aab2131d7}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2026-01-29-9296fa6ba812129f213774691c55123b50a5f79f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -153,7 +153,7 @@ services:
   jore4-mapmatching-base:
     container_name: "mapmatching"
     # you may replace the bundled docker image by setting $MAPMATCHING_DOCKER_IMAGE
-    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2026-01-19-12f24b99611171a60e00f584702aa487c8bd3ea3}"
+    image: "${MAPMATCHING_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-map-matching:main-2026-01-29-896d5954e61fada3f92ca96ee34623501e138c59}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -290,7 +290,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-01-19-7b2631a189aed0713b3c1be1bdbdf056bb60c6d4}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-01-29-92b7e5af8b405e6cac400e7336637e8e9c507ee5}"
     restart: "unless-stopped"
     networks:
       - jore4
