@@ -41,7 +41,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-03-04-bf17aadb61a07cc1b404865bfd4631d2f9c489b8}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-03-04-38e7789fda610b4196c6f28b1bc2ea56baaff20b}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -60,7 +60,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-01-29-1b2c15e67c328fe9e4e3a9c71a85e5b73181215c}"
+    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-03-04-92987cad3d918ddc9fdc2c5a45dca4cf9949b132}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -309,7 +309,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-03-04-bf17aadb61a07cc1b404865bfd4631d2f9c489b8}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-03-04-38e7789fda610b4196c6f28b1bc2ea56baaff20b}"
     restart: "unless-stopped"
     networks:
       - jore4
