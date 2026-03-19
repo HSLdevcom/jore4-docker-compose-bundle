@@ -266,3 +266,7 @@ secrets:
     file: ./secret-timetablesapi-jore4-db-password
   timetablesapi-jore4-db-username:
     file: ./secret-timetablesapi-jore4-db-username
+  testdb-db-dss-password:
+    file: ./secret-testdb-db-dss-password
+  testdb-db-dss-username:
+    file: ./secret-testdb-db-dss-username

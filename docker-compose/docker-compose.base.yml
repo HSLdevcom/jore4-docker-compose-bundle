@@ -267,6 +267,10 @@ services:
         target: /mnt/secrets-store/db-timetables-api-username
       - source: testdb-db-timetables-name
         target: /mnt/secrets-store/db-timetables-name
+      - source: testdb-db-dss-name
+        target: /mnt/secrets-store/db-dss-name
+      - source: testdb-db-dss-password
+        target: /mnt/secrets-store/db-dss-password
 
   jore4-tiamat-base:
     container_name: "tiamat"
