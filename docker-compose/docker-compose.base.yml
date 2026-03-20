@@ -93,6 +93,8 @@ services:
         target: /mnt/secrets-store/db-hostname
       - source: hasura-db-jore3importer-username
         target: /mnt/secrets-store/db-jore3importer-username
+      - source: hasura-db-jore4-main-name
+        target: /mnt/secrets-store/db-jore4-main-name
       - source: hasura-db-name
         target: /mnt/secrets-store/db-name
       - source: hasura-db-password

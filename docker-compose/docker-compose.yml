@@ -170,6 +170,8 @@ secrets:
     file: ./secret-hasura-db-hostname
   hasura-db-jore3importer-username:
     file: ./secret-hasura-db-jore3importer-username
+  hasura-db-jore4-main-name:
+    file: ./secret-hasura-db-jore4-main-name
   hasura-db-name:
     file: ./secret-hasura-db-name
   hasura-db-password:
