@@ -226,6 +226,10 @@ secrets:
     file: ./secret-testdb-db-auth-password
   testdb-db-auth-username:
     file: ./secret-testdb-db-auth-username
+  testdb-db-dss-password:
+    file: ./secret-testdb-db-dss-password
+  testdb-db-dss-username:
+    file: ./secret-testdb-db-dss-username
   testdb-db-hasura-name:
     file: ./secret-testdb-db-hasura-name
   testdb-db-hasura-password:

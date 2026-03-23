@@ -243,6 +243,10 @@ services:
         target: /mnt/secrets-store/db-auth-password
       - source: testdb-db-auth-username
         target: /mnt/secrets-store/db-auth-username
+      - source: testdb-db-dss-password
+        target: /mnt/secrets-store/db-dss-password
+      - source: testdb-db-dss-username
+        target: /mnt/secrets-store/db-dss-username
       - source: testdb-db-hasura-name
         target: /mnt/secrets-store/db-hasura-name
       - source: testdb-db-hasura-password
