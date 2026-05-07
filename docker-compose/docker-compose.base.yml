@@ -189,7 +189,7 @@ services:
   jore4-mbtiles-base:
     container_name: "mbtiles"
     # you may replace the bundled docker image by setting $MBTILES_DOCKER_IMAGE
-    image: "${MBTILES_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mbtiles-server:main-2026-02-09-581d4c524fb3174a7288def293fe47912523de2d}"
+    image: "${MBTILES_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mbtiles-server:main-2026-05-07-92255f341009db96491817e0b97bf65ac1097a9b}"
     restart: "unless-stopped"
     networks:
       - jore4
