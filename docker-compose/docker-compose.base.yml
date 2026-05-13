@@ -113,7 +113,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2026-03-11-2c39eee72daa596eff8566590e62d65503754ab1}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2026-05-13-2491e64bd3bbf890a372301615f2a95067db8d9d}"
     restart: "unless-stopped"
     networks:
       - jore4
