@@ -227,7 +227,7 @@ services:
   jore4-testdb-base:
     container_name: "testdb"
     # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
-    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2026-03-23-013a359496dfa1354fe69d16af888c39aad04815}"
+    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2026-09-14-fa6a002941f6e502f88dd9fcc8632c140d21152d}"
     restart: "unless-stopped"
     networks:
       - jore4
