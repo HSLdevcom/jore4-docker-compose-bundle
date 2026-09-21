@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2026-03-11-3f72e5bcc40acf4947ca7845831cad7f13525adf}"
+    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2026-09-21-5fb7d3b2baff99392da4628b8572aca2925105a4}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -172,7 +172,7 @@ services:
   jore4-mapmatchingdb-base:
     container_name: "mapmatchingdb"
     # you may replace the bundled docker image by setting $MAPMATCHINGDB_DOCKER_IMAGE
-    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2026-09-14-7e6a06260d759e9e201ed564390d4e5ded70f46a}"
+    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2026-09-21-f7c5afdd649ff72c347d95c21ac47ca7b59e9362}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -189,7 +189,7 @@ services:
   jore4-mbtiles-base:
     container_name: "mbtiles"
     # you may replace the bundled docker image by setting $MBTILES_DOCKER_IMAGE
-    image: "${MBTILES_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mbtiles-server:main-2026-05-07-92255f341009db96491817e0b97bf65ac1097a9b}"
+    image: "${MBTILES_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mbtiles-server:main-2026-09-21-72670f29f34bee07a17563fceae73a029428132c}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -214,7 +214,7 @@ services:
   jore4-mssqltestdb-base:
     container_name: "mssqltestdb"
     # you may replace the bundled docker image by setting $MSSQLTESTDB_DOCKER_IMAGE
-    image: "${MSSQLTESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mssql-testdb:main-2026-05-18-56ac8d90b02008f5b9d492205b3c50c667010e5d}"
+    image: "${MSSQLTESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mssql-testdb:main-2026-09-21-64bdddb83cf12ed4f73e584b95eaa06c7f003b67}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -227,7 +227,7 @@ services:
   jore4-testdb-base:
     container_name: "testdb"
     # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
-    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2026-09-14-7e6a06260d759e9e201ed564390d4e5ded70f46a}"
+    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2026-09-21-f7c5afdd649ff72c347d95c21ac47ca7b59e9362}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -277,7 +277,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2026-08-17-2fb10c517169bf75a8331b068b084f2329f30c69}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2026-09-21-2032610f46fdc04054618b88a846b654457c8f2b}"
     restart: "unless-stopped"
     networks:
       - jore4
