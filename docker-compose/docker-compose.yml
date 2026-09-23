@@ -64,15 +64,6 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-  jore4-mbtiles:
-    extends:
-      file: docker-compose.base.yml
-      service: jore4-mbtiles-base
-    ports:
-      - "127.0.0.1:3203:8000"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
   jore4-idp:
     extends:
       file: docker-compose.base.yml
