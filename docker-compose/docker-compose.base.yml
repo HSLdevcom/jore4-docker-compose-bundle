@@ -41,7 +41,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-09-23-64a5b6949b90995df87ca2ce82f48fec935379ef}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-09-25-92fd09d3664f771fa0af00ecf528f28c2035ddcb}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -71,7 +71,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2026-09-18-d7e69e453b1601ee3d294204ab0e27a974d668d3}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2026-09-24-24108cba7668814f378d5e791efba013fb60657f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -172,7 +172,7 @@ services:
   jore4-mapmatchingdb-base:
     container_name: "mapmatchingdb"
     # you may replace the bundled docker image by setting $MAPMATCHINGDB_DOCKER_IMAGE
-    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2026-09-21-f7c5afdd649ff72c347d95c21ac47ca7b59e9362}"
+    image: "${MAPMATCHINGDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-mapmatching:main-2026-09-25-f7dc7629fb5ba7ee3b970b29df0ad29b7dbf1696}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -217,7 +217,7 @@ services:
   jore4-testdb-base:
     container_name: "testdb"
     # you may replace the bundled docker image by setting $TESTDB_DOCKER_IMAGE
-    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2026-09-21-f7c5afdd649ff72c347d95c21ac47ca7b59e9362}"
+    image: "${TESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-postgres-azuredbmock:main-2026-09-24-f7dc7629fb5ba7ee3b970b29df0ad29b7dbf1696}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -305,7 +305,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-09-23-64a5b6949b90995df87ca2ce82f48fec935379ef}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-09-25-92fd09d3664f771fa0af00ecf528f28c2035ddcb}"
     restart: "unless-stopped"
     networks:
       - jore4
