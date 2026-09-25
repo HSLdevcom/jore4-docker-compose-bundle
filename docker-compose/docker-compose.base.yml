@@ -118,7 +118,7 @@ services:
     networks:
       - jore4
     environment:
-      DIGIROAD_STOP_CSV_FILE_URL: "https://stjore4dev001.blob.core.windows.net/jore4-digiroad/2025-09-18_digiroad_stops_2025_02.csv"
+      DIGIROAD_STOP_CSV_FILE_URL: "https://stjore4dev001.blob.core.windows.net/jore4-digiroad/digiroad_stops_2026-01.csv"
       MAP_MATCHING_API_BASEURL: "http://localhost:3005/api/mapmatching"
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
     secrets:
@@ -177,7 +177,7 @@ services:
     networks:
       - jore4
     environment:
-      DIGIROAD_ROUTING_DUMP_URL: "https://stjore4dev001.blob.core.windows.net/jore4-digiroad/2025-08-29_create_routing_schema_digiroad_r_2025_02_fixup.sql"
+      DIGIROAD_ROUTING_DUMP_URL: "https://stjore4dev001.blob.core.windows.net/jore4-digiroad/2026-08-04_create_routing_schema_digiroad_r_2026-01_mml_2026-08-04.sql"
       POSTGRES_DB: "jore4mapmatching"
       SECRET_STORE_BASE_PATH: "/mnt/secrets-store"
     secrets:
