@@ -71,7 +71,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2026-09-28-f06701d59458f64e28b0849bdecc369dc0154a72}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2026-09-28-7be4eb273245556766f86398fca3cb41fdfe44e3}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -286,7 +286,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-03-11-af54ffe442037d2f26b6ac5324cb0cba1258ac51}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-09-28-773eadbbba436b3a9a167e38cdd2148d34dd7e96}"
     restart: "unless-stopped"
     networks:
       - jore4
