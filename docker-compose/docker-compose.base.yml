@@ -41,7 +41,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-09-29-d6ba847ca397bfee3a43ef347cfeea146357441a}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-10-01-0d88072f5fae5656906cc9e0bd92475e3421faa0}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -113,7 +113,7 @@ services:
   jore4-jore3importer-base:
     container_name: "jore3importer"
     # you may replace the bundled docker image by setting $JORE3IMPORTER_DOCKER_IMAGE
-    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2026-07-28-ab432fb4c04dbf014479885a0902a2fa34910379}"
+    image: "${JORE3IMPORTER_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-jore3-importer:main-2026-10-01-e927d25962b77e23c105e70025fdbd61385b129d}"
     restart: "unless-stopped"
     networks:
       - jore4
