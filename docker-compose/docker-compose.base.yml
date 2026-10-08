@@ -7,7 +7,7 @@ services:
   jore4-auth-base:
     container_name: "auth"
     # you may replace the bundled docker image by setting $AUTH_DOCKER_IMAGE
-    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2026-09-21-5fb7d3b2baff99392da4628b8572aca2925105a4}"
+    image: "${AUTH_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-auth:main-2026-10-08-420f1e1ce998c65149c3e66b0f10cda68363e2b4}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -41,7 +41,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-10-08-5a0abdd6339c1207186be3c4b31dc9ba37ec75c2}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-10-08-528582637bc97404a3ae53614626a43b61cfd331}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -204,7 +204,7 @@ services:
   jore4-mssqltestdb-base:
     container_name: "mssqltestdb"
     # you may replace the bundled docker image by setting $MSSQLTESTDB_DOCKER_IMAGE
-    image: "${MSSQLTESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mssql-testdb:main-2026-09-21-64bdddb83cf12ed4f73e584b95eaa06c7f003b67}"
+    image: "${MSSQLTESTDB_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-mssql-testdb:main-2026-10-08-7e6c043ef08df47ff310d6042ad7c3fa93f7ee58}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -305,7 +305,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-10-08-5a0abdd6339c1207186be3c4b31dc9ba37ec75c2}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-10-08-528582637bc97404a3ae53614626a43b61cfd331}"
     restart: "unless-stopped"
     networks:
       - jore4
