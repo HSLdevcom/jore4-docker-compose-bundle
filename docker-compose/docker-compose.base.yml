@@ -60,7 +60,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-03-04-92987cad3d918ddc9fdc2c5a45dca4cf9949b132}"
+    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-10-08-11d0daa48d44545fc4420153ebed23cc40d66526}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -267,7 +267,7 @@ services:
   jore4-tiamat-base:
     container_name: "tiamat"
     # you may replace the bundled docker image by setting $TIAMAT_DOCKER_IMAGE
-    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2026-09-21-2032610f46fdc04054618b88a846b654457c8f2b}"
+    image: "${TIAMAT_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-tiamat:main-2026-10-08-ade704eedd6f8a719c7dc3f593716517c946d220}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -286,7 +286,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-10-01-18fd43dcff74187bd8a0c39cb0dd9b290b4fe3fb}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-10-08-257df7b0a25a2cabd17bd1e03ac00a6cd08aed26}"
     restart: "unless-stopped"
     networks:
       - jore4
