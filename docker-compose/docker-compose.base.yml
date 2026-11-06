@@ -41,7 +41,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-11-05-7b58665365ac7545d9a1cbeec6e64de684cf8e07}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-11-06-f98d2dbbe21bb7aeafaed8ac6212b2de29232b17}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -285,7 +285,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-10-08-257df7b0a25a2cabd17bd1e03ac00a6cd08aed26}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-11-06-95bb22382bc56e2868fdffb037c458f7a3ca0aa6}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -304,7 +304,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-11-05-7b58665365ac7545d9a1cbeec6e64de684cf8e07}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-11-06-f98d2dbbe21bb7aeafaed8ac6212b2de29232b17}"
     restart: "unless-stopped"
     networks:
       - jore4
