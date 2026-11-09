@@ -41,7 +41,7 @@ services:
   jore4-cypress-base:
     container_name: "cypress"
     # you may replace the bundled docker image by setting $CYPRESS_DOCKER_IMAGE
-    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-11-06-f98d2dbbe21bb7aeafaed8ac6212b2de29232b17}"
+    image: "${CYPRESS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-cypress:main-2026-11-09-eea6f14ede5776229beff7e164ca8f29e507bae1}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -60,7 +60,7 @@ services:
   jore4-hastus-base:
     container_name: "hastus"
     # you may replace the bundled docker image by setting $HASTUS_DOCKER_IMAGE
-    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-10-28-b90d6100ecb8b46fc164663bde5975d80a503838}"
+    image: "${HASTUS_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hastus:main-2026-11-09-17e9b4ca051de841b4a99c9fa38cf89e5648daa0}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -71,7 +71,7 @@ services:
   jore4-hasura-base:
     container_name: "hasura"
     # you may replace the bundled docker image by setting $HASURA_DOCKER_IMAGE
-    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2026-11-05-5f5b60a19ef14fd40e499661ef1c317a6785afb0}"
+    image: "${HASURA_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-hsl-hasura:main-2026-11-09-7b9c6f1111cd4add7de684e92dac4af42d642f0f}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -285,7 +285,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-11-06-95bb22382bc56e2868fdffb037c458f7a3ca0aa6}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-11-09-55d06d10ec910c68f458dca495e923d851d5907e}"
     restart: "unless-stopped"
     networks:
       - jore4
@@ -304,7 +304,7 @@ services:
   jore4-ui-base:
     container_name: "ui"
     # you may replace the bundled docker image by setting $UI_DOCKER_IMAGE
-    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-11-06-f98d2dbbe21bb7aeafaed8ac6212b2de29232b17}"
+    image: "${UI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-ui:main-2026-11-09-eea6f14ede5776229beff7e164ca8f29e507bae1}"
     restart: "unless-stopped"
     networks:
       - jore4
