@@ -285,7 +285,7 @@ services:
   jore4-timetablesapi-base:
     container_name: "timetablesapi"
     # you may replace the bundled docker image by setting $TIMETABLESAPI_DOCKER_IMAGE
-    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-11-18-b81d1d4374c3f48958cb9af7fc79e7a8b0abc5e2}"
+    image: "${TIMETABLESAPI_DOCKER_IMAGE:-crjore4prod001.azurecr.io/jore4-timetables-api:main-2026-11-23-32c7f4d538c5118160a6a8e72bd69741ce32a96c}"
     restart: "unless-stopped"
     networks:
       - jore4
